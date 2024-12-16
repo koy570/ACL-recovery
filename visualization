@@ -1,0 +1,35 @@
+import matplotlib.pyplot as plt
+
+# Data for visualization
+groups = ["Brace", "Elastic Band", "Control"]
+quadriceps_strength = [0.674, 0.398, 0.279]
+strength_errors = [0.124, 0.130, 0.130]
+activation_levels = [73.19, 69.55, 68.29]
+knee_symmetry = [3.23, 0.556, 0.846]
+
+# Visualization 1: Quadriceps Strength
+plt.figure(figsize=(8, 6))
+plt.bar(groups, quadriceps_strength, yerr=strength_errors, capsize=5, color=['blue', 'orange', 'green'])
+plt.title("Change in Quadriceps Muscle Strength")
+plt.ylabel("Strength Change (Nm/kg)")
+plt.xlabel("Training Groups")
+plt.tight_layout()
+plt.show()
+
+# Visualization 2: Quadriceps Voluntary Activation
+plt.figure(figsize=(8, 6))
+plt.bar(groups, activation_levels, color=['blue', 'orange', 'green'])
+plt.title("Quadriceps Voluntary Activation")
+plt.ylabel("Activation Level (%)")
+plt.xlabel("Training Groups")
+plt.tight_layout()
+plt.show()
+
+# Visualization 3: Knee Flexion Angle Symmetry
+plt.figure(figsize=(8, 6))
+plt.bar(groups, knee_symmetry, color=['blue', 'orange', 'green'])
+plt.title("Change in Knee Flexion Angle Symmetry")
+plt.ylabel("Symmetry Change (degrees)")
+plt.xlabel("Training Groups")
+plt.tight_layout()
+plt.show()
